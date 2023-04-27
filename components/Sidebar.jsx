@@ -1,7 +1,7 @@
 import Image from "next/image"
 import React from "react"
-import {RiHome2Fill} from "react-icons/ri"
-import {  BsPeople } from "react-icons/bs"
+import { RiHome2Fill } from "react-icons/ri"
+import { BsPeople } from "react-icons/bs"
 import { MdLiveTv } from "react-icons/md"
 import { Rubik, Heebo } from "next/font/google"
 import Link from "next/link"
@@ -17,11 +17,11 @@ const icons1 = [
     name: "For You",
   },
   {
-    icon: <BsPeople size={23} />,
+    icon: <BsPeople size={23} className="dark:text-white" />,
     name: "Following",
   },
   {
-    icon: <MdLiveTv size={23} />,
+    icon: <MdLiveTv size={23} className="dark:text-white" />,
     name: "LIVE",
   },
 ]
@@ -94,25 +94,28 @@ const followingAccounts = [
 
 const Sidebar = () => {
   return (
-    <div className="left-0 hidden xs:block sticky mt-[51px] top-14 overflow-y-scroll w-[88px] lg:w-[232px] border-r lg:border-r-0 border-gray-100">
+    <div className="left-0 hidden xs:block sticky mt-[50px] top-14 overflow-y-scroll w-[88px] lg:w-[232px] border-r lg:border-r-0 border-gray-100 dark:bg-neutral-900 dark:border-neutral-700">
       <div
         id="sidebar"
         className="grid justify-items-center pb-3 pt-5 h-[545px] w-full overflow-y-scroll overflow-visible snap-mandatory px-2"
       >
-        <ul className="flex items-center pb-2 flex-col justify-start gap-1 w-full border-b">
+        <ul className="flex items-center pb-2 flex-col justify-start gap-1 w-full border-b dark:border-neutral-700">
           {icons1.map((cell, index) => (
             <li
               key={index}
               className={`min-w-[55px] w-full  ${
-                cell.name === "Following" && "bg-gray-100 lg:bg-white"
+                cell.name === "Following" && "bg-gray-100 dark:bg-neutral-800 lg:dark:bg-neutral-900 lg:bg-white"
               }`}
             >
-              <Link href={`/`} className="flex items-center relative justify-center lg:w-full lg:justify-start h-[48px] rounded w-full hover:bg-gray-100 lg:gap-4 font-semibold   place-items-center lg:px-4">
+              <Link
+                href={`/`}
+                className="flex items-center relative justify-center lg:w-full lg:justify-start h-[48px] rounded w-full hover:bg-gray-100 lg:gap-4 font-semibold   place-items-center lg:px-4"
+              >
                 {cell.icon}
                 <div className="lg:relative">
                   <p
                     style={heebo.style}
-                    className={`hidden font-bold lg:block text-lg ${
+                    className={`hidden dark:text-neutral-100 font-bold lg:block text-lg ${
                       cell.name === "For You" && "text-[#FE2C55]"
                     }`}
                   >
@@ -127,8 +130,8 @@ const Sidebar = () => {
           ))}
         </ul>
 
-        <ul className="flex flex-col w-full py-2 lg:pt-0 gap-1 border-b">
-          <h3 className="text-sm font-semibold px-2 hidden  lg:flex items-center h-[40px] text-neutral-600 opacity-80">
+        <ul className="flex flex-col w-full py-2 lg:pt-0 gap-1 border-b dark:border-neutral-700">
+          <h3 className="text-sm font-semibold px-2 hidden  lg:flex items-center h-[40px] text-neutral-600 dark:text-white opacity-80">
             Suggested accounts
           </h3>
           {suggestedAccounts.map((user, index) => (
@@ -145,16 +148,16 @@ const Sidebar = () => {
               />
               <div className="hidden lg:flex flex-col text-sm">
                 <div className="relative flex gap-1">
-                  <p className="font-semibold">{user.username}</p>
+                  <p className="font-semibold dark:text-white">{user.username}</p>
                   <Image src="/tick.png" width={18} height={18} alt="" />
                 </div>
-                <p className="text-gray-500 text-xs">{user.name}</p>
+                <p className="text-gray-500 dark:text-neutral-200 text-xs">{user.name}</p>
               </div>
             </li>
           ))}
         </ul>
         <ul className="flex flex-col w-full py-2 lg:pt-0 gap-1">
-          <h3 className="text-sm font-semibold px-2 hidden  lg:flex items-center h-[40px] text-neutral-600 opacity-80">
+          <h3 className="text-sm font-semibold px-2 hidden  lg:flex items-center h-[40px] text-neutral-600 dark:text-white opacity-80">
             Following accounts
           </h3>
           {followingAccounts.map((user, index) => (
@@ -171,12 +174,10 @@ const Sidebar = () => {
               />
               <div className="hidden lg:flex flex-col text-sm">
                 <div className="relative flex gap-1">
-                  <p className="font-semibold">{user.username}</p>
+                  <p className="font-semibold dark:text-white">{user.username}</p>
                   <Image src="/tick.png" width={18} height={18} alt="" />
                 </div>
-                <p  className="text-gray-500 text-xs">
-                  {user.name}
-                </p>
+                <p className="text-gray-500 dark:text-neutral-200 text-xs">{user.name}</p>
               </div>
             </li>
           ))}
