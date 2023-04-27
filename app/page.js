@@ -28,17 +28,17 @@ const Home = () => {
           <Searchbar />
 
           <ul className="flex gap-1 items-center">
-            <li className="text-sm rounded border border-gray-200 dark:border-neutral-700 h-[36px] px-4 gap-1 hidden lg:flex items-center justify-center font-semibold text-[#23252F] dark:text-white">
+            <li className="text-sm rounded border border-gray-200 dark:border-neutral-700 h-[36px] px-4 gap-1 hidden lg:flex items-center justify-center font-semibold text-[#23252F] dark:text-white dark:hover:bg-neutral-800 hover:bg-gray-100 cursor-pointer">
               <AiOutlinePlus size={19} className="text-[#23252F dark:text-white" />
               Upload
             </li>
-            <li className="rounded-lg h-12 w-12 cursor-pointer hover:bg-gray-100 grid place-items-center">
+            <li className="rounded-lg h-12 w-12 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 grid place-items-center">
               <FaRegPaperPlane size={24} className="text-[#23252F dark:text-white" />
             </li>
-            <li className="rounded-lg h-12 w-12 cursor-pointer hover:bg-gray-100 grid place-items-center mr-1">
+            <li className="rounded-lg h-12 w-12 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 grid place-items-center mr-1">
               <BiMessageAltMinus size={26} className="text-[#23252F dark:text-white" />
             </li>
-            <li className="rounded-lg h-12 w-12 cursor-pointer hover:bg-gray-100 grid place-items-center">
+            <li className="rounded-lg h-12 w-12 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 grid place-items-center">
               <Image
                 src="/selfie.jpg"
                 width={34}

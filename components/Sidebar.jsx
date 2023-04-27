@@ -109,7 +109,7 @@ const Sidebar = () => {
             >
               <Link
                 href={`/`}
-                className="flex items-center relative justify-center lg:w-full lg:justify-start h-[48px] rounded w-full hover:bg-gray-100 lg:gap-4 font-semibold   place-items-center lg:px-4"
+                className="flex items-center relative justify-center lg:w-full lg:justify-start h-[48px] rounded w-full hover:bg-gray-100 dark:hover:bg-neutral-800 lg:gap-4 font-semibold   place-items-center lg:px-4"
               >
                 {cell.icon}
                 <div className="lg:relative">
@@ -137,7 +137,7 @@ const Sidebar = () => {
           {suggestedAccounts.map((user, index) => (
             <li
               key={index}
-              className="hover:bg-gray-100 w-[55px] lg:w-full h-[48px] flex items-center justify-center lg:justify-start lg:gap-2 px-2 rounded cursor-pointer"
+              className="hover:bg-gray-100 dark:hover:bg-neutral-800 w-[55px] lg:w-full h-[48px] flex items-center justify-center lg:justify-start lg:gap-2 px-2 rounded cursor-pointer"
             >
               <Image
                 src={user.avatar}
@@ -163,7 +163,7 @@ const Sidebar = () => {
           {followingAccounts.map((user, index) => (
             <li
               key={index}
-              className="hover:bg-gray-100 w-[55px] lg:w-full h-[48px] flex items-center justify-center lg:justify-start lg:gap-2 px-2 rounded cursor-pointer"
+              className="hover:bg-gray-100 dark:hover:bg-neutral-800 w-[55px] lg:w-full h-[48px] flex items-center justify-center lg:justify-start lg:gap-2 px-2 rounded cursor-pointer"
             >
               <Image
                 src={user.avatar}

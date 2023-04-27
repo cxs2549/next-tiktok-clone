@@ -142,7 +142,7 @@ const Tok = ({ username, name, caption, image, avatar }) => {
   return (
     <div className="relative mt-7 flex  flex-col items-center justify-center">
       {/* desktop info */}
-      <div className="hidden lg:block absolute left-full ml-3 top-5 order-2 rounded-xl w-[360px] mx-auto ">
+      <div className="hidden lg:block absolute left-full ml-3 top-1 order-2 rounded-xl w-[360px] mx-auto ">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="rounded-full h-14 w-14 mb-2 cursor-pointer">
@@ -210,21 +210,21 @@ const Tok = ({ username, name, caption, image, avatar }) => {
       <div className="hidden sm:flex flex-col gap-3 absolute bottom-1 left-full ml-3">
         {/* heart icon */}
         <div className="flex flex-col justify-center items-center gap-2 cursor-pointer ">
-          <div className="grid place-items-center rounded-full w-[32px] h-[32px] lg:scale-[1.35] lg:mb-2.5 bg-gray-200">
+          <div className="grid place-items-center rounded-full w-[32px] h-[32px] lg:scale-[1.35] lg:mb-2 bg-gray-200">
             <FaHeart size={20} className="text-red-500 order-2" />
           </div>
           <p className="text-xs font-bold dark:text-stone-200">329.2k</p>
         </div>
         {/* comment icon */}
         <div className=" cursor-pointer flex flex-col justify-center items-center gap-2">
-          <div className="grid place-items-center rounded-full w-[32px] h-[32px] lg:scale-[1.35] lg:mb-2.5 bg-gray-200 lg:mt-2.5">
+          <div className="grid place-items-center rounded-full w-[32px] h-[32px] lg:scale-[1.35] lg:my-2 bg-gray-200 lg:mt-2.5">
             <FiMessageSquare size={20} className="text-neutral-600 order-2 " />
           </div>
           <p className="text-xs font-bold dark:text-stone-200">867</p>
         </div>
         {/* share icon  */}
         <div className=" cursor-pointer flex flex-col justify-center items-center gap-2">
-          <div className="grid place-items-center rounded-full w-[32px] h-[32px] lg:scale-[1.35] lg:my-2.5 bg-gray-200">
+          <div className="grid place-items-center rounded-full w-[32px] h-[32px] lg:scale-[1.35] lg:my-2 bg-gray-200">
             <FiShare size={20} className="text-neutral-600 order-2" />
           </div>
           <p className="text-xs font-bold dark:text-stone-200">2564</p>
