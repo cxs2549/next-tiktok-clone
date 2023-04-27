@@ -1,7 +1,9 @@
 import Image from "next/image"
 import { FiMessageSquare, FiPlay, FiShare } from "react-icons/fi"
 import { useMemo } from "react"
-import {FaHeart} from 'react-icons/fa'
+import { FaHeart } from "react-icons/fa"
+import Skeleton from "react-loading-skeleton"
+import "react-loading-skeleton/dist/skeleton.css"
 
 const Videos = () => {
   const images = [
@@ -53,6 +55,13 @@ const Videos = () => {
       "Clark",
       "Perez",
     ]
+
+    const randomImages = []
+
+    for (let i = 0; i < 10; i++) {
+      const randomImageIndex = Math.floor(Math.random() * images.length)
+      randomImages.push(randomImageIndex)
+    }
 
     const randomNames = []
 
@@ -110,7 +119,7 @@ const Videos = () => {
       "Be yourself, everyone else is already taken 🦄 Unleash your unique personality and let your true self shine! #Unique #Authenticity",
     ]
     return {
-      image: image,
+      image: images[randomImages[i]],
       avatar: avatars[i],
       username: randomUsernames[i],
       name: randomNames[i],
@@ -128,7 +137,7 @@ const Videos = () => {
         id="video-container"
         className="grid place-items-center gap-8 h-[545px] pb-8 w-full snap-mandatory justify-items-center overflow-y-scroll snap-y"
       >
-        {tiktoks.map((image, i) => (
+        {videos.map((image, i) => (
           <Tok key={i} {...image} />
         ))}
       </div>
@@ -170,8 +179,11 @@ const Tok = ({ username, name, caption, image, avatar }) => {
         <p className="text-sm dark:text-stone-100">{caption}</p>
       </div>
       {/* top when mobile */}
-      <div className="left-0 px-2 absolute snap-start top-5 max-w-[320px] w-full max-h-[100px] z-20 rounded-xl lg:hidden  ">
-        <div className="flex items-center justify-between">
+      <div className=" px-2 absolute snap-start mx-auto left-1/2 -translate-x-1/2 min-w-[95%] pt-2 max-h-[100px] z-20 top-1 m-2  rounded-xl lg:hidden  ">
+        {/* dark overlay */}
+        <div className="absolute inset-0 bg-black/50 rounded-xl" />
+        
+        <div className="relative z-10 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="rounded-full cursor-pointer h-14 w-14 mb-2">
               <Image
@@ -183,11 +195,11 @@ const Tok = ({ username, name, caption, image, avatar }) => {
               />
             </div>
             <div className="flex flex-col text-sm -translate-y-1">
-              <p className="font-semibold cursor-pointer">{username}</p>
-              <p className="text-xs text-neutral-600 cursor-pointer">{name}</p>
+              <p className="font-semibold cursor-pointer text-white">{username}</p>
+              <p className="text-xs opacity-75 text-neutral-400 cursor-pointer">{name}</p>
             </div>
           </div>
-          <button className="border-2 border-red-400 cursor-pointer rounded text-red-400 font-semibold py-1 px-6 text-sm self-start">
+          <button className="border-2 border-red-400 cursor-pointer rounded text-red-400 font-semibold py-1 px-5 text-sm self-start">
             Follow
           </button>
         </div>

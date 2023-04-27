@@ -19,7 +19,7 @@ const Searchbar = () => {
       <input
         type="search"
         placeholder="Search"
-        className="h-[40px] border focus:border-amber-400 w-full rounded-full px-4 bg-gray-100 dark:bg-neutral-800 dark:placeholder:text-stone-500 dark:border-neutral-600"
+        className="h-[40px] border focus:border-amber-400 w-full rounded-full px-4 bg-gray-100 dark:bg-neutral-900 dark:placeholder:text-stone-500 dark:border-neutral-600"
       />
       {/* search icon */}
       <FiSearch className="absolute top-1/2 right-4 text-2xl text-stone-500 -translate-y-1/2" />

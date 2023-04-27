@@ -109,7 +109,7 @@ const Sidebar = () => {
             >
               <Link
                 href={`/`}
-                className="flex items-center relative justify-center lg:w-full lg:justify-start h-[48px] rounded w-full hover:bg-gray-100 dark:hover:bg-neutral-800 lg:gap-4 font-semibold   place-items-center lg:px-4"
+                className="flex items-center relative justify-center lg:w-full lg:justify-start h-[48px] rounded overflow-hidden w-full hover:bg-gray-100 dark:hover:bg-neutral-800 lg:gap-4 font-semibold   place-items-center lg:px-4"
               >
                 {cell.icon}
                 <div className="lg:relative">
